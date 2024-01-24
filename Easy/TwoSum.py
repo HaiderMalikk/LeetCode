@@ -1,7 +1,7 @@
 Array = [1 ,3 , 5, 9, 11]
 Target = 8 # 3 + 5
 
-class Solution:
+class Solution: # two sum
     def TwoSum(array, target):
         n = len(array)
         for i in range(0, n - 1):
