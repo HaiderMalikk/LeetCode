@@ -3,7 +3,7 @@ def QuickSort(array):
         return array
     
     pivot = array[0]
-    left = [x for x in array[1:] if x < pivot] # NOTE: '1:' creates a new array using array that has all of arrays elemnts starting from index 1
+    left = [x for x in array[1:] if x < pivot] # NOTE: "1:" creates a new array using array that has all of arrays elemnts starting from index 1
     right = [x for x in array[1:] if x >= pivot]
 
     return QuickSort(left) + [pivot] + QuickSort(right)
