@@ -13,4 +13,4 @@ array = [3, 6, 8, 10, 1, 2, 1]
 arr_sorted = QuickSort(array)
 print(arr_sorted)
 
-# time complexity: O(log(n)) text
+# time complexity: O(log(n))
