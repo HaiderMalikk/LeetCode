@@ -1,5 +1,5 @@
 def romanToInt(str):
-    #  map Roman numeral characters to integers
+    #  map Roman numeral characters to integer
     m = {
         'I': 1,
         'V': 5,
