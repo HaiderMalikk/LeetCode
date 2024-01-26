@@ -1,4 +1,4 @@
-def romanToInt(str):
+def romanToInt(str): # function
     #  map Roman numeral characters to integers
     m = {
         'I': 1,
