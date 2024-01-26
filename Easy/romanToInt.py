@@ -26,5 +26,5 @@ def romanToInt(str):
     # Return the final integer value
     return answer
 
-romantoint_result = romanToInt("MCMXCIV")
-print(romantoint_result)
+romantoInt_result = romanToInt("MCMXCIV")
+print(romantoInt_result)
