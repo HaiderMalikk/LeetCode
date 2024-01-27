@@ -4,3 +4,5 @@ def lengthOfLastWord(s):
     return len(LastWord) # return the length of the last word
 
 print(lengthOfLastWord("   hello  my     name   is   ali  ")) # you can see it has odd spaces and leading/ trailing white space
+
+
