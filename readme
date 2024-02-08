@@ -5,10 +5,11 @@
 2. LengthOfLastWord
 3. MajorityElement
 4. Palindrome Number
-5. QuickSort # not a offical leetcode problem still is a easy level question.
-6. RemoveDuplicates
-7. RemoveElement
-8. ReverseString
-9. RomanToInt
-10. Running Sum
-11. Two Sum
+5. Pascals Triangle
+6. QuickSort # not a offical leetcode problem still is a easy level question.
+7. RemoveDuplicates
+8. RemoveElement
+9. ReverseString
+10. RomanToInt
+11. Running Sum
+12. Two Sum
