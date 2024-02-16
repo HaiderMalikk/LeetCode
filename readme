@@ -1,6 +1,7 @@
 # DO you want ez pz leetcode solutions that are in depth begginer friendly and AWESOME!
 # THEN LOOK NO FURTHER
 # list of compleated problems
+EASY:
 1. FizzBuzz
 2. LengthOfLastWord
 3. MajorityElement
@@ -14,3 +15,5 @@
 11. Running Sum
 12. Two Sum
 13. Plus One
+MEDIUM:
+ThreeSum
