@@ -1,0 +1,16 @@
+def isHappy(n):
+    seen = set()
+    while True:
+        if n in seen:
+            return False
+        seen.add(n) # add our first given int
+        total = 0
+        for i in str(n):
+            digit = int(i)
+            square = digit ** 2
+            total += square
+        if total == 1:
+            return True
+        n = total # update current num for second iteration of 19 n = 82
+
+print(isHappy(19))
