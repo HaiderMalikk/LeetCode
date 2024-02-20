@@ -1,16 +1,16 @@
 def isHappy(n):
-    seen = set()
+    seen = set() # create a set to track the numbers we have already checked.
     while True:
-        if n in seen:
+        if n in seen: # if our new integer is in the set, we have a loop. therefore number is not happy
             return False
-        seen.add(n) # add our first given int
-        total = 0
-        for i in str(n):
-            digit = int(i)
-            square = digit ** 2
-            total += square
-        if total == 1:
+        seen.add(n) # add our first given int to set, after each iteration the variable "n" will be changed by the next line of code and the new int is added to set
+        total = 0 # total tracks the sum of the digits square
+        for i in str(n): # make int a str to iterate over it
+            digit = int(i) # i is the index of the current char in the string by converting to int we can square it
+            square = digit ** 2 # square the digit note digit ** 2 is the same as digit * digit
+            total += square # add the square of the current digit to the total 
+        if total == 1: # if we reach 1, the number is happy.
             return True
-        n = total # update current num for second iteration of 19 n = 82
+        n = total # update current num for second iteration of n = 19 the new n is n = 82 and this will go on forever until n is seen before
 
 print(isHappy(19))
