@@ -1,0 +1,24 @@
+def reverseList(head):
+    """
+    :type head: ListNode
+    :rtype: ListNode
+    """
+    # Initialize pointers
+    prev = None
+    current = head
+    
+    # Iterate through the list
+    while current is not None:
+        # Store the next node
+        next_node = current.next
+        # Reverse the pointer
+        current.next = prev
+        # Move pointers one step forward
+        prev = current
+        current = next_node
+    
+    # At the end, 'prev' will be the new head of the reversed list
+    return prev
+
+# (when current is None), prev will be pointing to the new head of the reversed list
+# (since current is None). Return prev as the new head of the reversed list.
