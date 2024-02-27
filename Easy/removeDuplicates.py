@@ -13,4 +13,3 @@ def removeDuplicates(nums: list) -> list: # dynamicly changing len of array
 
 nums = [1, 1, 1, 2, 3, 3, 4]
 print(removeDuplicates(nums))
-
