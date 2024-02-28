@@ -1,25 +1,20 @@
-def lastStoneWeight(stones: list[int]) -> int:
-    stones.sort()
-    while len(stones) > 1:
-        x = stones[-1]
-        y = stones[-2]
+# when i was making this solution i just brute forced it plz dont use this there are better solutions out there
+def lastStoneWeight(stones: list[int]) -> int: 
+    stones.sort() # after sorting the largest element is x second largest is y
+    while len(stones) > 1: # run untill one element is left
+        x = stones[-1] # last element (largest)
+        y = stones[-2] # second last element (second largest)
         if x > y:
-            newsum =  x - y
+            newrock=  x - y # new stones
+            stones.pop() # pop the last stone (x)
+            stones.pop() # pop the last stone (y)
+            stones.append(newrock) # add the newrock to the end of list
+
+        if x == y:# if the stones are same 
+            # remove the two identical stones
             stones.pop()
             stones.pop()
-            stones.append(newsum)
-
-        if x == y:
-            if len(stones) == 2 and stones[0] == stones[1]:
-                stones.pop()
-                stones.pop()
-                stones.append(0)
-
-
-            else:
-                stones.pop()
-                stones.pop()
-
+            stones.append(0) # add a zero as thats the diffrence of x and y if there the same 
 
         stones.sort()
 
