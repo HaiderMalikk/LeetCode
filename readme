@@ -7,7 +7,7 @@ EASY:
 3. MajorityElement
 4. Palindrome Number
 5. Pascals Triangle
-6. 
+6. CountPairsWhosSumIsLessThanTarget
 7. RemoveDuplicates
 8. RemoveElement
 9. ReverseString
@@ -15,14 +15,15 @@ EASY:
 11. Running Sum
 12. Two Sum
 13. Plus One
-14. PowerOfTwo
+14. LastStoneWeight
 15. HappyNumber
 16. MissingNumber 
 17. ReverseLinkedList
 18. Longest Common Prefix
 19. Is pangram
 20. Best time to buy and sell stock
-21. LastStoneWeight
-22. CountPairsWhosSumIsLessThanTarget
+21. PowerOfTwo
+22. PowerofThree
+22. PowerofFour (replace 4 with any int n and it will work for Powerofn)
 MEDIUM:
 1. ThreeSum
