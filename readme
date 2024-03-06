@@ -3,27 +3,28 @@
 # list of compleated problems
 EASY:
 1. FizzBuzz
-2. LengthOfLastWord
-3. MajorityElement
+2. Length Of Last Word
+3. Majority Element
 4. Palindrome Number
 5. Pascals Triangle
-6. CountPairsWhosSumIsLessThanTarget
-7. RemoveDuplicates
-8. RemoveElement
-9. ReverseString
-10. RomanToInt
+6. Count Pairs Whos Sum Is Less Than Target
+7. Remove Duplicates
+8. Remove Element
+9. Reverse String
+10. Roman To Int
 11. Running Sum
 12. Two Sum
 13. Plus One
-14. LastStoneWeight
-15. HappyNumber
-16. MissingNumber 
-17. ReverseLinkedList
+14. Last Stone Weight
+15. Happy Number
+16. Missing Number 
+17. Reverse Linked List
 18. Longest Common Prefix
 19. Is pangram
 20. Best time to buy and sell stock
-21. PowerOfTwo
-22. PowerofThree
-22. PowerofFour (replace 4 with any int n and it will work for Powerofn)
+21. Power Of Two
+22. Power of Three
+22. Power of Four (replace 4 with any int n and it will work for Powerofn)
 MEDIUM:
-1. ThreeSum
+1. Three Sum
+2. Longest Substring Without Repeating Characters
