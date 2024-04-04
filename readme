@@ -25,6 +25,8 @@ EASY:
 21. Power Of Two
 22. Power of Three
 22. Power of Four (replace 4 with any int n and it will work for Powerofn)
+23. Valid Palindrome
+24. Fibonacci Numbers
 MEDIUM:
 1. Three Sum
 2. Longest Substring Without Repeating Characters
