@@ -1,4 +1,4 @@
-# reverse vowels (beats, Runtime: 51% 15ms Memory: 26% 17.9ms) solution (rater bloated but works and it simple)
+# reverse vowels (beats, Runtime: 51% 15ms Memory: 26% 17.9ms) solution (rather bloated but works and it simple)
 # ! Idea
 """ 
 1) take the string given and build a array of chars.
