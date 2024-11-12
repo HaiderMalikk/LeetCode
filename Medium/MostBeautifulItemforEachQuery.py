@@ -1,22 +1,44 @@
-# TODO: fix time error for arrays of very large size 1000 + the time limit is exceded
+# TODO find good sol 
+# ! sol 2
 def maximumBeauty(items, queries):
-    maxBeautyarray = [] # array to store max beauty for each query
-    for querie in queries: # lop over each query
-        validitemsarray = [] # array to store valid items for each query
-        maxBeauty = 0 # variable to store max beauty for each query
-        
-        for item in items: # find all iteams in the given items array whose first value (price) is less than or equal to the current query
+    maxBeautyarray = []
+    for querie in queries:
+        validitemsarray = []
+        for item in items:
             if item[0] <= querie:
-                validitemsarray.append(item) # add the item to the valid items array
+                validitemsarray.append(item)
+                
+        # we have valid iteams insted of loping over it just use max
+        # use key = x: x[1] to get the second element of each item in validitemsarray
+        # then append the element at index 1 of the max tuple in validitemsarray as index 1 is the beauty
+        # if we find no valid iteams we append 0 as beauty
         
-        for validitems in validitemsarray: # loop over each valid item and find the maximum beauty
-            if validitems[1] > maxBeauty: # if the current item's beauty is greater than the max beauty found so far
-                maxBeauty = validitems[1] # update the max beauty
+        if len(validitemsarray) != 0:
+            maxBeautyarray.append(max(validitemsarray, key = lambda x: x[1])[1]) # add this to notes in python
+        else:
+            maxBeautyarray.append(0)
+    
+    return maxBeautyarray if len(maxBeautyarray) != 0 else [0] # shorthand
+
+# ! sol 1
+# def maximumBeauty(items, queries):
+#     maxBeautyarray = [] # array to store max beauty for each query
+#     for querie in queries: # lop over each query
+#         validitemsarray = [] # array to store valid items for each query
+#         maxBeauty = 0 # variable to store max beauty for each query
         
-        maxBeautyarray.append(maxBeauty) # add the max beauty found for the current query to the max beauty array and move to the next query
+#         for item in items: # find all iteams in the given items array whose first value (price) is less than or equal to the current query
+#             if item[0] <= querie:
+#                 validitemsarray.append(item) # add the item to the valid items array
+        
+#         for validitems in validitemsarray: # loop over each valid item and find the maximum beauty
+#             if validitems[1] > maxBeauty: # if the current item's beauty is greater than the max beauty found so far
+#                 maxBeauty = validitems[1] # update the max beauty
+        
+#         maxBeautyarray.append(maxBeauty) # add the max beauty found for the current query to the max beauty array and move to the next query
     
-    return maxBeautyarray # return the max beauty array
+#     return maxBeautyarray # return the max beauty array
     
-print(maximumBeauty([[1,2],[3,2],[2,4],[5,6],[3,5]], [1,2,3,4,5,6])) # Output: [2,4,5,5,6,6]
-print(maximumBeauty([[1,2],[1,2],[1,3],[1,4]], [1])) # Output: [4]
-print(maximumBeauty([[10,1000]], [5])) # Output: [0]
+# print(maximumBeauty([[1,2],[3,2],[2,4],[5,6],[3,5]], [1,2,3,4,5,6])) # Output: [2,4,5,5,6,6]
+# print(maximumBeauty([[1,2],[1,2],[1,3],[1,4]], [1])) # Output: [4]
+# print(maximumBeauty([[10,1000]], [5])) # Output: [0]
