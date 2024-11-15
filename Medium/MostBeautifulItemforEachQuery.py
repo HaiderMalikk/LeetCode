@@ -24,6 +24,7 @@ Explanation:
   Hence, the answer for them is the maximum beauty of all items, i.e., 6.
 """
 
+# ! change the append to only append the beauty of the item and not the whole item
 
 
 # ! sol 3 (solution with sorting)
