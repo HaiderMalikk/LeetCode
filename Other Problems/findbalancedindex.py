@@ -1,29 +1,32 @@
 """ 
-- Find a index where the same amount even numbers at left and odd numbers at right
+- Find a index where the same amount even numbers at left and odd numbers at right, the index is the middle point of the array and dose not count as left or right.
 
 EX:
-arr = [1, 2, 3, 4, 5, 6, 7]
+arr =  [2, 4, 1, 3, 5, 6]
 
-ans: index 3, at element 4. we have 1 even number at left and 2 odd number s at left, and 1 even number at right and 2 odd numbers at right
-this means the list is balanced at index 3
+ans: index 2, element value: 1 we have 2 even number at left(2, 4) and 2 odd number at right(3, 5)
 """
 # Solution
 
-def findbalancedindex(arr): 
-    for i in arr: # loop over the array
-        # split the array into left and right subarrays at each loop the split point is the current index
-        left = arr[:i-1] # get all elements to the left of the current element discluding the current element
-        right = arr[i:] # get all elements to the right of the current element
+def findbalancedindex(arr): # returns the first index where the same amount even numbers at left and odd numbers at right
+    for i in range(len(arr)): # loop through the array n times where n is the length of the array this makes sure we check the left and right side of the array at each element
+        left = arr[:i] # the left side of the array if from the start to before the current index (here i is discluded)
+        right = arr[i+1:] # the right side of the array if from the end to the current index + 1 this +1 discards the current index making it the middle, here i is included so we need i + 1
+        # all left and right arrays are with reference to the current index (middle)
         
-        eveninleft = list(filter(lambda x: x % 2==0, left)) # get all even numbers in the left side
-        oddinleft = list(filter(lambda x: x % 2 !=0, left)) # get all odd numbers in the left side
-        eveninright = list(filter(lambda x: x % 2==0, right)) # get all even numbers in the right side
-        oddinright = list(filter(lambda x: x % 2 !=0, right)) # get all odd numbers in the right side
+        eveninleft = list(filter(lambda x: x % 2 == 0, left))  # filter out even numbers from the left side
+        oddinright = list(filter(lambda x: x % 2 != 0, right))  # filter out odd numbers from the right side
         
-        # if the number of even numbers in the left side is equal to the number of odd numbers in the right side
-        # this compares values in the left and right subarrays
-        if (len(eveninleft) == len(eveninright)) and (len(oddinleft) == len(oddinright)): 
-            return arr.index(i) # return the index of the current element as thats the point where the array is balanced
+        if len(eveninleft) == len(oddinright): # if the number of even numbers in the left side is equal to the number of odd numbers in the right side
+            return i # return the current index which is the middle point of the array
         
-arr = [1, 2, 3, 4, 5, 6, 7]
-print(findbalancedindex(arr)) # output: 3
+    return None # if no such index is found return None
+        
+arr = [2, 4, 1, 3, 5, 6]
+print(findbalancedindex(arr)) # output: 2 at index 2 = value 1, theres is 2 even number at left(2,4) and 2 odd number at right(3,5)
+arr2 = [2, 6, 3, 5, 5, 4, 7] 
+print(findbalancedindex(arr2)) # output: 3 at index 3 = value 5, theres is 2 even number at left(2,6) and 2 odd number at right(3,5)
+arr3 = [1, 3, 5, 7, 9, 11 ] 
+print(findbalancedindex(arr3)) # output: 5 at index 5 = value 11, theres is 0 even number at left(1,3,5,7,9) and 0 odd number at right(no elements so 0 elements)
+arr4 = [1, 3, 6, 8, 1, 1]
+print(findbalancedindex(arr4)) # output: None
