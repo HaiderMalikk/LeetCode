@@ -1,0 +1,20 @@
+def gcdOfStrings(str1,str2):
+    str2builder = ""
+    for i in range(len(str2)):
+        str2builder += str2[i]
+        flag = True
+        ran = False
+        for j in range(len(str1)//len(str2builder) - (len(str2)-len(str2builder)) ):
+            ran = True
+            newstr = str1[j:len(str2builder)]
+            nextnewstr = str1[len(str2builder):len(str2builder) + len(str2builder)]
+            if newstr != nextnewstr:
+                flag = False
+                break
+        if flag and ran: return str2builder
+    return None
+    
+print(gcdOfStrings("ABCABC", "ABC"))# out: ABC
+print(gcdOfStrings("ABABAB", "ABAB"))# out: AB
+print(gcdOfStrings("LEET", "CODE"))# out: ""
+
